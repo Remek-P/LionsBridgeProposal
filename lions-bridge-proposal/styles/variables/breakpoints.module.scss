@@ -1,0 +1,10 @@
+$breakpointM: 600px;
+$breakpointL: 800px;
+$breakpointXL: 1400px;
+
+$grid-auto-columns: 1fr;
+
+
+:export {
+  breakpointL: $breakpointL
+}

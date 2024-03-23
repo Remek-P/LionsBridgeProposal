@@ -1,0 +1,10 @@
+@import "../../../styles/variables/color.module";
+
+.collapsed {
+    width: 4px;
+    height: 18px;
+
+    & > * {
+        fill: $color-header-font;
+    }
+}

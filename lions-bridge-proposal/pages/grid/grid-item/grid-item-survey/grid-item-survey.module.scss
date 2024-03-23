@@ -1,0 +1,174 @@
+@import "../../../../styles/variables/font.module";
+@import "../../../../styles/variables/color.module";
+@import "../../../../styles/variables/distance.module";
+@import "../../../../styles/variables/breakpoints.module";
+
+.gridForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  background-color: $color-grid-item-text-background;
+  color: $color-grid-item-text;
+
+  transition: $transition;
+
+  &Header {
+    padding-top: 15%;
+    display: flex;
+    justify-content: center;
+
+    & > svg {
+      width: 58%;
+      aspect-ratio: 5.48 / 1;
+
+      fill: $color-grid-item-text;
+    }
+  }
+
+  &Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 3%;
+  }
+
+  &Legend {
+    padding-top: 5%;
+    font-size: clamp(
+            $font-grid-item-legend-min,
+            calc($font-grid-item-legend-mobile + 0.2rem),
+            $font-grid-item-legend-max
+    );
+  }
+
+  &InputContainer {
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    gap: 5%;
+    border: 1px solid $color-grid-item-text;
+
+    & input[type="checkbox"]:checked ~ label {
+      background-color: $color-grid-item-text-background-checked;
+      color: $color-grid-item-text-checked;
+    }
+
+    & input[type="checkbox"]:checked ~ label::before {
+      background-color: $color-grid-item-text-background;
+      color: $color-grid-item-text-before-checked;
+    }
+  }
+
+  & input[type="checkbox"] {
+    display: none;
+  }
+
+  &Label {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 2px;
+
+    font-weight: 100;
+    font-size: clamp(
+            $font-grid-item-label-min,
+            calc($font-grid-item-label-mobile + 0.2rem),
+            $font-grid-item-label-max
+    );
+
+    &::before {
+      content: attr(data-inputoption);
+      padding-inline: 1.5%;
+      margin-right: clamp(4px, 3%, 15px);
+
+      background-color: $color-header-background;
+      color: $color-grid-item-text-checked;
+    }
+
+    cursor: pointer;
+  }
+
+  @media (min-width: $breakpointM) {
+
+    gap: 10%;
+
+    &Legend {
+      font-size: clamp(
+              $font-grid-item-legend-min,
+              calc($font-grid-item-legend-tablet + 0.2rem),
+              $font-grid-item-legend-max
+      );
+    }
+
+    &Label {
+      font-size: clamp(
+              $font-grid-item-legend-min,
+              calc($font-grid-item-label-tablet + 0.2rem),
+              $font-grid-item-legend-max
+      );
+    }
+
+    &Header {
+      padding-top: 15%;
+    }
+  }
+
+  @media (min-width: $breakpointL) {
+
+    &InputContainer {
+      width: 80%;
+    }
+
+    &Legend {
+      font-size: clamp(
+              $font-grid-item-legend-min,
+              calc($font-grid-item-legend-desktop + 0.2rem),
+              $font-grid-item-legend-max
+      );
+    }
+
+    &Label {
+      font-size: clamp(
+              $font-grid-item-legend-min,
+              calc($font-grid-item-label-desktop + 0.2rem),
+              $font-grid-item-legend-max
+      );
+    }
+
+    * > svg {
+      width: 155px;
+    }
+  }
+
+  @media (min-width: $breakpointXL) {
+
+    &Legend {
+      font-size: clamp(
+              $font-grid-item-legend-min,
+              calc($font-grid-item-legend-desktopXL + 0.2rem),
+              $font-grid-item-legend-max
+      );
+    }
+
+    &Label {
+      font-size: clamp(
+              $font-grid-item-legend-min,
+              calc($font-grid-item-label-desktopXL + 0.2rem),
+              $font-grid-item-legend-max
+      );
+    }
+
+    &InputContainer {
+      width: 60%;
+    }
+
+     * > svg {
+      width: 50%;
+    }
+  }
+}
+

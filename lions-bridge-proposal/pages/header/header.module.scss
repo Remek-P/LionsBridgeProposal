@@ -1,0 +1,20 @@
+@import "../../styles/variables/color.module";
+@import "../../styles/variables/breakpoints.module";
+
+.header {
+  position: relative; //for nav (hamburger)
+
+  display: flex;
+  padding: 13px 5px;
+
+  background-color: $color-header-background;
+
+  text-decoration: none;
+  color: inherit;
+  
+  @media (min-width: $breakpointL) {
+
+    padding: 44px 5px 39px 5px;
+
+  }
+}

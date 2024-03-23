@@ -1,0 +1,28 @@
+.visually-hidden:not(:focus):not(:active) {
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 3500px;
+
+  background-color: black;
+
+  font-family: "Playfair Display", "Helvetica Neue", sans-serif;
+}
+
+:focus-visible {
+  outline: 2px solid red;
+}
+
+//Assigning names for grid.module.scss
+@for $i from 1 through 22 {
+  #gridItem#{$i} {
+    grid-area: item#{$i};
+  }
+}

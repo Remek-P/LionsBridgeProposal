@@ -1,0 +1,17 @@
+@import "../../styles/variables/distance.module";
+@import "../../styles/variables/breakpoints.module";
+
+.headerNav {
+  all: unset;
+
+  position: absolute; //relative to header
+  top: 27%;
+  right: calc(28.31px - $padding-nav);
+  padding: $padding-nav;
+
+  cursor: pointer;
+
+  @media (min-width: $breakpointL) {
+    display: none;
+  }
+}

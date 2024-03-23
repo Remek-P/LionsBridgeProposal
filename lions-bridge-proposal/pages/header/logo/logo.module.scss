@@ -1,0 +1,35 @@
+@import "../../../styles/variables/color.module";
+@import "../../../styles/variables/font.module";
+@import "../../../styles/variables/distance.module";
+@import "../../../styles/variables/breakpoints.module";
+
+.logo {
+  margin: 0 auto;
+  padding-block: $padding-nav;
+
+  & > svg {
+    width: 174px;
+    height: 26px;
+
+    fill: $color-header-font;
+
+  }
+
+  @media (min-width: $breakpointM) {
+
+    margin-left: 2%;
+
+    & > svg {
+      width: 268.77px;
+      height: 40px;
+    }
+  }
+
+  @media (min-width: $breakpointL) {
+
+    & > svg {
+      width: 383px;
+      height: 57px;
+    }
+  }
+}

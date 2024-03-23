@@ -1,0 +1,28 @@
+@import "../../../../styles/variables/font.module";
+@import "../../../../styles/variables/color.module";
+@import "../../../../styles/variables/distance.module";
+
+.gridItem {
+  &Picture {
+    position: relative;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+
+    background-color: $color-grid-item-text-background;
+
+    transition: $transition;
+}
+  &Text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $color-grid-item-text-background;
+
+    font-size: $font-size-grid-item-mobile;
+    font-weight: normal;
+    color: $color-grid-item-text;
+
+    transition: $transition;
+  }
+}
