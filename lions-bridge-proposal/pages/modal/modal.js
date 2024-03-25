@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 
-function Modal({ children, isOpen, setIsOpen}) {
+function Modal({ children, isOpen }) {
 
   const [ enabledDocument, setEnabledDocument ] = useState(false);
 
@@ -13,9 +13,9 @@ function Modal({ children, isOpen, setIsOpen}) {
 
   return enabledDocument ?
       ReactDOM.createPortal(
-          <>
-            { children }
-          </>,
+          <div>
+            {children}
+          </div>,
           document.getElementById("modal")
       ) : null
 }
