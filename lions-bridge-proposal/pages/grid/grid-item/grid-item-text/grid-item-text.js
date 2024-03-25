@@ -29,9 +29,10 @@ function GridItemText({ id, textItem, mainText = "test" }) {
       authoritative history of lorem ipsum.</p>
   </>
 
-  const onClick = () => {
+  const openModal = () => {
     setIsOpen(true);
   }
+
   const closeModal = () => {
     setIsOpen(false);
   }
@@ -45,7 +46,7 @@ function GridItemText({ id, textItem, mainText = "test" }) {
   const popUp = <div className={classes.gridItemModalOverlay}>
     <button type="button"
             className={classes.gridItemModalClose}
-            onClickCapture={closeModal}
+            onClick={closeModal}
     >{ svg }</button>
     <h3 className={classes.gridItemModalHeader}>{textItem}</h3>
     <div className={classes.gridItemModalContainer}>
@@ -54,10 +55,12 @@ function GridItemText({ id, textItem, mainText = "test" }) {
   </div>
 
   return (
-      <li id={id} className={classes.gridItemText} onClick={onClick}>
-        <span>{textItem}</span>
+      <li id={id} className={classes.gridItemText} onClickCapture={openModal}>
+        <span>{ textItem }</span>
         {
-          isOpen ? <Modal setIsOpen={setIsOpen} isOpen={isOpen}>{popUp}</Modal> : null
+          isOpen
+              ? <Modal setIsOpen={setIsOpen} isOpen={isOpen}>{popUp}</Modal>
+              : null
         }
       </li>
   )
