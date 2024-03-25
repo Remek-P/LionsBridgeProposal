@@ -1,0 +1,19 @@
+@import "../../../../styles/variables/font.module";
+@import "../../../../styles/variables/color.module";
+@import "../../../../styles/variables/distance.module";
+
+.gridItemText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $color-grid-item-text-background;
+
+  font-size: $font-size-grid-item-mobile;
+  font-weight: normal;
+  color: $color-grid-item-text;
+
+  cursor: pointer;
+
+  transition: $transition;
+}

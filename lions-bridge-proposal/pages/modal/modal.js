@@ -16,7 +16,7 @@ function Modal({ children, isOpen}) {
           <>
             { children }
           </>,
-          document.getElementById("portal")
+          document.getElementById("modal")
       ) : null
 }
 

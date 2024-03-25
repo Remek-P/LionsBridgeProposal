@@ -4,22 +4,14 @@ import classes from "./grid-item.module.scss";
 
 import breakpointL from "../../../../styles/variables/breakpoints.module.scss"
 
-function GridItemPictureText({
-                               textItem = false,
+function GridItemPicture({
                                isPriority = false,
                                path,
                                alt,
                                id,
                   }) {
 
-  if (textItem)
-    return (
-        <li id={id} className={classes.gridItemText}>
-          <span>{textItem}</span>
-        </li>
-    )
-
-  return (
+ return (
       <li id={id} className={classes.gridItemPicture}>
         <Image src={path}
                alt={alt}
@@ -31,4 +23,4 @@ function GridItemPictureText({
   );
 }
 
-export default GridItemPictureText;
+export default GridItemPicture;
