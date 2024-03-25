@@ -6,14 +6,16 @@ import GridItemText from "@/pages/grid/grid-item/grid-item-text/grid-item-text";
 
 function Grid() {
 
-      const path = "/assets/grid-item/"
+      const path = "/assets/grid-item/";
+
+
 
   return (
       <ul className={classes.grid}>
         <GridItemPicture id="gridItem1" key={1} isPriority={true} path={`${path}logo.jpg`} alt="The right partner" />
         <GridItemPicture id="gridItem2" key={2} path={`${path}CEO.jpg`} alt="" />
         <GridItemPicture id="gridItem3" key={3} path={`${path}office_light.jpg`} alt="" />
-        <GridItemPicture id="gridItem4" key={4} path={`${path}office_mood.jpg`} alt="" />
+        <GridItemPicture id="gridItem4" key={4} isPriority={true} path={`${path}office_mood.jpg`} alt="" />
         <GridItemText id="gridItem5" key={5} textItem="#real estate" alt="#real estate" />
         <GridItemPicture id="gridItem6" key={6} path={`${path}car.jpg`} alt="" />
         <GridItemPicture id="gridItem7" key={7} path={`${path}home_mood.jpg`} alt="" />

@@ -2,18 +2,81 @@
 @import "../../../../styles/variables/color.module";
 @import "../../../../styles/variables/distance.module";
 
-.gridItemText {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.gridItem {
 
-  background-color: $color-grid-item-text-background;
+  &Text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-  font-size: $font-size-grid-item-mobile;
-  font-weight: normal;
-  color: $color-grid-item-text;
+    background-color: $color-grid-item-text-background;
 
-  cursor: pointer;
+    font-size: $font-size-grid-item-mobile;
+    font-weight: normal;
+    color: $color-grid-item-text;
 
-  transition: $transition;
+    cursor: pointer;
+
+    transition: $transition;
+  }
+
+  &Modal {
+
+    &Close {
+      all: unset;
+
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      width: 32px;
+      height: 32px;
+
+      cursor: pointer;
+
+      & > * {
+        fill: $color-grid-item-text;
+      }
+    }
+
+    &Overlay {
+      position: absolute;
+      top: 52px;
+      left: 0;
+      width: 100%;
+      height: 100dvh;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 9%;
+
+
+      //padding-block: 40px;
+      background-color: $color-grid-item-text-background;
+    }
+
+    &Header,
+    &Container {
+            color: $color-grid-item-text;
+    }
+
+    &Header {
+      padding-top: 52px;
+
+      font-size: 24px;
+      font-weight: normal;
+
+    }
+
+    &Container {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      padding-inline: 20px;
+
+      & > p {
+        line-height: 1.5;
+      }
+    }
+  }
 }

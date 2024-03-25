@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 
-function Modal({ children, isOpen}) {
+function Modal({ children, isOpen, setIsOpen}) {
 
   const [ enabledDocument, setEnabledDocument ] = useState(false);
 
   useEffect(() => {
-    setEnabledDocument(true)
+    setEnabledDocument(true);
   }, []);
 
   if (!isOpen) return null;
