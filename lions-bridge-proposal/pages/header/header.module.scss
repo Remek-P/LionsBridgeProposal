@@ -2,7 +2,10 @@
 @import "../../styles/variables/breakpoints.module";
 
 .header {
-  position: relative; //for nav (hamburger)
+  position: sticky; //keep at least relative for nav (hamburger)
+
+  top: 0;
+  z-index: 101; //higher than grid-item
 
   display: flex;
   padding: 13px 5px;
