@@ -43,6 +43,7 @@
             $font-grid-item-legend-mobile,
             $font-grid-item-legend-max
     );
+    text-align: center;
   }
 
   &InputContainer {
@@ -92,31 +93,6 @@
     cursor: pointer;
   }
 
-  @media (min-width: $breakpointM) {
-
-    gap: 10%;
-
-    &Legend {
-      font-size: clamp(
-              $font-grid-item-legend-min,
-              $font-grid-item-legend-tablet,
-              $font-grid-item-legend-max
-      );
-    }
-
-    &Label {
-      font-size: clamp(
-              $font-grid-item-legend-min,
-              $font-grid-item-legend-tablet,
-              $font-grid-item-legend-max
-      );
-    }
-
-    &Header {
-      padding-top: 15%;
-    }
-  }
-
   @media (min-width: $breakpointL) {
 
     &InputContainer {
@@ -134,13 +110,13 @@
     &Label {
       font-size: clamp(
               $font-grid-item-legend-min,
-              $font-grid-item-legend-desktop,
+              $font-grid-item-label-desktop,
               $font-grid-item-legend-max
       );
     }
 
     * > svg {
-      width: 155px;
+      width: 70%;
     }
   }
 
@@ -157,7 +133,7 @@
     &Label {
       font-size: clamp(
               $font-grid-item-legend-min,
-              $font-grid-item-legend-desktopXL,
+              $font-grid-item-label-desktopXL,
               $font-grid-item-legend-max
       );
     }
@@ -167,7 +143,29 @@
     }
 
      * > svg {
-      width: 50%;
+      width: 70%;
+    }
+  }
+  
+  @media (min-width: $breakpointXXL) {
+    &Legend {
+      font-size: clamp(
+              $font-grid-item-legend-min,
+              $font-grid-item-legend-desktopXXL,
+              $font-grid-item-legend-max
+      );
+    }
+
+    &Label {
+      font-size: clamp(
+              $font-grid-item-legend-min,
+              $font-grid-item-label-desktopXXL,
+              $font-grid-item-legend-max
+      );
+    }
+
+    * > svg {
+      width: 75%;
     }
   }
 }

@@ -11,7 +11,6 @@
 
 body {
   margin: 0 auto;
-  max-width: 3500px;
 
   background-color: black;
 
@@ -29,10 +28,17 @@ body {
   }
 }
 
-.hide {
+.hideSmall {
   display: none;
 
   @media (min-width: $breakpointL) {
     display: inherit;
+  }
+}
+
+.hideMedium {
+
+  @media (min-width: $breakpointXL) and (max-width: $breakpointXXL) {
+    display: none;
   }
 }

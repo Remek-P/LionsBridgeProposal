@@ -9,26 +9,46 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    aspect-ratio:  1 / 1;
 
     background-color: $color-grid-item-text-background;
+    overflow: hidden;
 
-    font-size: $font-size-grid-item-mobile;
+    font-size: clamp(
+            $font-size-grid-item-min,
+            $font-size-grid-item-mobile,
+            $font-size-grid-item-max
+    );
     font-weight: normal;
     color: $color-grid-item-text;
     text-align: center;
+    word-break: break-word;
 
     cursor: pointer;
 
     transition: $transition;
 
-    @media (min-width: $breakpointM) {
-      font-size: $font-size-grid-item-tablet;
-    }
     @media (min-width: $breakpointL) {
-      font-size: $font-size-grid-item-desktop;
+      font-size: clamp(
+              $font-size-grid-item-min,
+              $font-size-grid-item-tablet,
+              $font-size-grid-item-max
+      );
     }
     @media (min-width: $breakpointXL) {
-      font-size: $font-size-grid-item-desktopXL;
+      font-size: clamp(
+              $font-size-grid-item-min,
+              $font-size-grid-item-desktop,
+              $font-size-grid-item-max
+      );
+    }
+
+    @media (min-width: $breakpointXXL) {
+      font-size: clamp(
+              $font-size-grid-item-min,
+              $font-size-grid-item-desktopXL,
+              $font-size-grid-item-max
+      );
     }
   }
 
@@ -109,7 +129,7 @@
         @media (min-width: $breakpointL) {
           font-size: $font-size-grid-item-modal-paragraph-desktop;
         }
-        @media (min-width: $breakpointXL) {
+        @media (min-width: $breakpointXXL) {
           font-size: $font-size-grid-item-modal-paragraph-desktopXL;
         }
       }
