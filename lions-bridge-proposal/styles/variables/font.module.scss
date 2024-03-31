@@ -5,19 +5,32 @@ $line-header-height: 57px;
 $letter-header-spacing: 0px;
 $text-header-align: left;
 
-$font-size-grid-item-mobile: 1rem; //16px;
-$font-size-grid-item-desktopXL: 2.5rem; //40px;
+$font-size-grid-item-mobile: calc(91% + 0.1rem);
+$font-size-grid-item-tablet: calc(100% + 0.5rem);
+$font-size-grid-item-desktop: calc(150% + 0.5rem);
+$font-size-grid-item-desktopXL: 2.5rem; //24px
+
+$font-size-grid-item-modal-header-mobile: 1.5rem; //24px
+$font-size-grid-item-modal-header-tablet: 1.5rem; //24px
+$font-size-grid-item-modal-header-desktop: 1.5rem; //24px
+$font-size-grid-item-modal-header-desktopXL: 1.5rem; //24px
+
+$font-size-grid-item-modal-paragraph-mobile: 1rem; //16px
+$font-size-grid-item-modal-paragraph-tablet: 1.2rem; //19px
+$font-size-grid-item-modal-paragraph-desktop: 1rem; //16px
+$font-size-grid-item-modal-paragraph-desktopXL: 1rem; //16px
+$line-height-grid-item-modal-paragraph: 1.8; //16px
 
 $font-grid-item-legend-min: 7px;
-$font-grid-item-legend-mobile: 80%;
-$font-grid-item-legend-tablet: 50%;
-$font-grid-item-legend-desktop: 70%;
-$font-grid-item-legend-desktopXL: 50%;
+$font-grid-item-legend-mobile: calc(80% + 0.2rem);
+$font-grid-item-legend-tablet: calc(50% + 0.2rem);
+$font-grid-item-legend-desktop: calc(70% + 0.2rem);
+$font-grid-item-legend-desktopXL: calc(50% + 0.2rem);
 $font-grid-item-legend-max: 3rem;
 
 $font-grid-item-label-min: 5px;
-$font-grid-item-label-mobile: 55%;
-$font-grid-item-label-tablet: 35%;
-$font-grid-item-label-desktop: 45%;
-$font-grid-item-label-desktopXL: 35%;
+$font-grid-item-label-mobile: calc(55% + 0.2rem);
+$font-grid-item-label-tablet: calc(35% + 0.2rem);
+$font-grid-item-label-desktop: calc(45% + 0.2rem);
+$font-grid-item-label-desktopXL: calc(35% + 0.2rem);;
 $font-grid-item-label-max: 3rem;

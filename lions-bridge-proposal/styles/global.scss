@@ -1,3 +1,5 @@
+@import "./variables/breakpoints.module";
+
 .visually-hidden:not(:focus):not(:active) {
   clip-path: inset(50%);
   height: 1px;
@@ -21,8 +23,16 @@ body {
 }
 
 //Assigning names for grid.module.scss
-@for $i from 1 through 22 {
+@for $i from 1 through 23 {
   #gridItem#{$i} {
     grid-area: item#{$i};
+  }
+}
+
+.hide {
+  display: none;
+
+  @media (min-width: $breakpointL) {
+    display: inherit;
   }
 }

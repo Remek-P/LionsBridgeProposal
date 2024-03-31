@@ -23,17 +23,18 @@ function Grid() {
         <GridItemPicture id="gridItem9" key={9} path={`${path}laptop.jpg`} />
         <GridItemText id="gridItem10" key={10} textItem="#invest" alt="#invest" />
         <GridItemPicture id="gridItem11" key={11} path={`${path}house_on_a_hill.jpg`} alt="" />
-        <GridItemPicture id="gridItem12" key={12} path={`${path}drone.jpg`} alt="" />
+        <GridItemPicture id="gridItem12" key={12} path={`${path}helicopter.jpg`} alt="" />
         <GridItemPicture id="gridItem13" key={13} path={`${path}signing.jpg`} alt="" />
         <GridItemPicture id="gridItem14" key={14} path={`${path}couple.jpg`} alt="" />
         <GridItemPicture id="gridItem15" key={15} path={`${path}office_sunset.jpg`} alt="" />
         <GridItemText id="gridItem16" key={16} textItem="#technology" alt="#technology" />
-        <GridItemPicture id="gridItem17" key={17} path={`${path}ledger.jpg`} alt="" />
+        <GridItemPicture id="gridItem17" key={17} path={`${path}envelope.jpg`} alt="" />
         <GridItemPicture id="gridItem18" key={18} path={`${path}bridge.jpg`} alt="" />
         <GridItemPicture id="gridItem19" key={19} path={`${path}house_night.jpg`} alt="" />
         <GridItemText id="gridItem20" key={20} textItem="#deal done" alt="#deal Done" />
         <GridItemPicture id="gridItem21" key={21} path={`${path}partnership.jpg`} alt="" />
             <GridItemSurvey id="gridItem22" key={22} />
+        <GridItemPicture id="gridItem23" key={23} hideItem="hide" path={`${path}man.jpg`} alt="" />
       </ul>
   );
 }

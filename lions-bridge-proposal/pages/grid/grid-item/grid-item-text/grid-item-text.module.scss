@@ -1,6 +1,7 @@
 @import "../../../../styles/variables/font.module";
 @import "../../../../styles/variables/color.module";
 @import "../../../../styles/variables/distance.module";
+@import "../../../../styles/variables/breakpoints.module";
 
 .gridItem {
 
@@ -19,6 +20,16 @@
     cursor: pointer;
 
     transition: $transition;
+
+    @media (min-width: $breakpointM) {
+      font-size: $font-size-grid-item-tablet;
+    }
+    @media (min-width: $breakpointL) {
+      font-size: $font-size-grid-item-desktop;
+    }
+    @media (min-width: $breakpointXL) {
+      font-size: $font-size-grid-item-desktopXL;
+    }
   }
 
   &Modal {
@@ -43,6 +54,13 @@
       background-color: $color-grid-item-text-background;
 
       animation: slideRight 0.8s ease-in-out;
+
+      @media (min-width: $breakpointM) {
+        top: 72px
+      }
+      @media (min-width: $breakpointL) {
+        top: 147px;
+      }
     }
 
     &Close {
@@ -70,7 +88,7 @@
     &Header {
       padding-top: 52px;
 
-      font-size: 24px;
+      font-size: $font-size-grid-item-modal-header-mobile;
       font-weight: normal;
 
     }
@@ -79,10 +97,21 @@
       display: flex;
       flex-direction: column;
       gap: 30px;
-      padding-inline: 20px;
+      padding-inline: 9.45%;
 
       & > p {
-        line-height: 1.5;
+        font-size: $font-size-grid-item-modal-paragraph-mobile;
+        line-height: $line-height-grid-item-modal-paragraph;
+        
+        @media (min-width: $breakpointM) {
+          font-size: $font-size-grid-item-modal-paragraph-tablet;
+        }
+        @media (min-width: $breakpointL) {
+          font-size: $font-size-grid-item-modal-paragraph-desktop;
+        }
+        @media (min-width: $breakpointXL) {
+          font-size: $font-size-grid-item-modal-paragraph-desktopXL;
+        }
       }
     }
   }

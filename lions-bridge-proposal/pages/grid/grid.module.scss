@@ -19,8 +19,13 @@
           "item22 item22 item22"
 ;
 
-  @media (min-width: $breakpointM) {
-
+  @media (min-width: $breakpointL) {
+    grid-template-areas:
+          "item1  item2  item3  item10 item11 item11  item16 item19"
+          "item4  item4  item5  item12  item11  item11  item18 item23"
+          "item4  item4 item6 item13 item14 item15  item22 item22"
+          "item7 item8  item9 item17 item20 item21 item22 item22"
+  ;
   }
 }
 

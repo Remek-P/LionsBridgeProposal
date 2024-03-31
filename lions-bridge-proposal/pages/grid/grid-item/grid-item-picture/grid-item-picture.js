@@ -5,17 +5,23 @@ import classes from "./grid-item.module.scss";
 import breakpointL from "../../../../styles/variables/breakpoints.module.scss"
 
 function GridItemPicture({
-                               isPriority = false,
-                               path,
-                               alt,
-                               id,
+                           isPriority = false,
+                           hideItem = false,
+                           path,
+                           alt,
+                           id,
                   }) {
 
+  const sizes = (
+      `(min-width: ${breakpointL}) 13vw 25vw, 
+      (max-width: ${breakpointL}) 34vw`
+  )
+
  return (
-      <li id={id} className={classes.gridItemPicture}>
+      <li aria-hidden={hideItem} id={id} className={`${classes.gridItemPicture} ${hideItem}`}>
         <Image src={path}
                alt={alt}
-               sizes={`(min-width: ${breakpointL}) 25vw 6.25vw, (max-width: ${breakpointL}) 13vw 3.25vw`}
+               sizes={sizes}
                fill
                priority={isPriority}
         />

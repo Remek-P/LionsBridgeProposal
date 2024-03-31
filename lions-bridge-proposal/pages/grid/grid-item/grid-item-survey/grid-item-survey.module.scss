@@ -40,7 +40,7 @@
     padding-top: 10%;
     font-size: clamp(
             $font-grid-item-legend-min,
-            calc($font-grid-item-legend-mobile + 0.2rem),
+            $font-grid-item-legend-mobile,
             $font-grid-item-legend-max
     );
   }
@@ -76,7 +76,7 @@
     font-weight: normal;
     font-size: clamp(
             $font-grid-item-label-min,
-            calc($font-grid-item-label-mobile + 0.2rem),
+            $font-grid-item-label-mobile,
             $font-grid-item-label-max
     );
 
@@ -99,7 +99,7 @@
     &Legend {
       font-size: clamp(
               $font-grid-item-legend-min,
-              calc($font-grid-item-legend-tablet + 0.2rem),
+              $font-grid-item-legend-tablet,
               $font-grid-item-legend-max
       );
     }
@@ -107,7 +107,7 @@
     &Label {
       font-size: clamp(
               $font-grid-item-legend-min,
-              calc($font-grid-item-label-tablet + 0.2rem),
+              $font-grid-item-legend-tablet,
               $font-grid-item-legend-max
       );
     }
@@ -126,7 +126,7 @@
     &Legend {
       font-size: clamp(
               $font-grid-item-legend-min,
-              calc($font-grid-item-legend-desktop + 0.2rem),
+              $font-grid-item-legend-desktop,
               $font-grid-item-legend-max
       );
     }
@@ -134,7 +134,7 @@
     &Label {
       font-size: clamp(
               $font-grid-item-legend-min,
-              calc($font-grid-item-label-desktop + 0.2rem),
+              $font-grid-item-legend-desktop,
               $font-grid-item-legend-max
       );
     }
@@ -149,7 +149,7 @@
     &Legend {
       font-size: clamp(
               $font-grid-item-legend-min,
-              calc($font-grid-item-legend-desktopXL + 0.2rem),
+              $font-grid-item-legend-desktopXL,
               $font-grid-item-legend-max
       );
     }
@@ -157,7 +157,7 @@
     &Label {
       font-size: clamp(
               $font-grid-item-legend-min,
-              calc($font-grid-item-label-desktopXL + 0.2rem),
+              $font-grid-item-legend-desktopXL,
               $font-grid-item-legend-max
       );
     }
