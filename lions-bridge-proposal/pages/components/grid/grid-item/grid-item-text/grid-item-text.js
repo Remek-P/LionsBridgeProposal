@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import Modal from "@/pages/modal/modal";
+import Modal from "@/pages/components/modal/modal";
 
 import classes from "./grid-item-text.module.scss";
 
@@ -35,7 +35,7 @@ function GridItemText({ id, textItem, mainText = "test" }) {
 
   const closeModal = () => {
     setIsOpen(false);
-  }
+  };
 
   const svg = <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
     <path d="M31 1L1 31" stroke="white"/>
@@ -59,7 +59,7 @@ function GridItemText({ id, textItem, mainText = "test" }) {
         <span>{ textItem }</span>
         {
           isOpen
-              ? <Modal setIsOpen={setIsOpen} isOpen={isOpen}>{popUp}</Modal>
+              ? <Modal isOpen={isOpen} onClose={closeModal}>{popUp}</Modal>
               : null
         }
       </li>

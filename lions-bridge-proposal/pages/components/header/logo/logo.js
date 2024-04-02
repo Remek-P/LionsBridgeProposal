@@ -3,7 +3,7 @@ import Link from "next/link";
 
 function Logo() {
   return (
-      <Link href="/" className={classes.logo}>
+      <Link href="/lions-bridge-proposal/public" className={classes.logo}>
         <span className="visually-hidden">Home Page Link</span>
         <svg viewBox="0 0 381 37" xmlns="http://www.w3.org/2000/svg">
           <path

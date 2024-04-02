@@ -1,8 +1,8 @@
-import GridItemPicture from "@/pages/grid/grid-item/grid-item-picture/grid-item-picture";
-import GridItemSurvey from "@/pages/grid/grid-item/grid-item-survey/grid-item-survey";
+import GridItemPicture from "@/pages/components/grid/grid-item/grid-item-picture/grid-item-picture";
+import GridItemSurvey from "@/pages/components/grid/grid-item/grid-item-survey/grid-item-survey";
 
 import classes from "./grid.module.scss";
-import GridItemText from "@/pages/grid/grid-item/grid-item-text/grid-item-text";
+import GridItemText from "@/pages/components/grid/grid-item/grid-item-text/grid-item-text";
 
 function Grid() {
 

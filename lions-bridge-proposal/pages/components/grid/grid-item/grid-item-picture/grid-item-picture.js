@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import classes from "./grid-item.module.scss";
 
-import breakpointL from "../../../../styles/variables/breakpoints.module.scss"
+import breakpointL from "../../../../../styles/variables/breakpoints.module.scss"
 
 function GridItemPicture({
                            isPriority = false,

@@ -1,6 +1,6 @@
 import Head from "next/head";
-import Header from "@/pages/header/header";
-import Grid from "@/pages/grid/grid";
+import Header from "@/pages/components/header/header";
+import Grid from "@/pages/components/grid/grid";
 
 export default function Home() {
   return (

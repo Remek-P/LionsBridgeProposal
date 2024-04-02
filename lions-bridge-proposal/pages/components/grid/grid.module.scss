@@ -1,6 +1,7 @@
-@import "../../styles/variables/breakpoints.module";
+@import "../../../styles/variables/breakpoints.module";
 
 .grid {
+  position: relative;
   display: grid;
   grid-auto-columns: $grid-auto-columns;
   grid-auto-rows: 1fr;
