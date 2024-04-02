@@ -9,13 +9,11 @@ const Modal = ({ isOpen, onClose, children }) => {
       }
     };
 
-    if (isOpen) {
-      document.addEventListener('keydown', handleEscape);
-    }
+    const eventListener = () => document.addEventListener('keydown', handleEscape);
 
-    return () => {
-      document.removeEventListener('keydown', handleEscape);
-    };
+    if (isOpen) eventListener();
+
+    return () => eventListener();
   }, [isOpen]);
 
   if (!isOpen) return null;
@@ -27,6 +25,5 @@ const Modal = ({ isOpen, onClose, children }) => {
       document.getElementById("modal")
   );
 };
-
 
 export default Modal;
