@@ -53,38 +53,39 @@
   }
 
   &Modal {
-      position: absolute;
+    position: absolute;
 
-      inset: 0;
-      width: 100%;
-      min-height: 100%;
+    inset: 0;
+    width: 100%;
+    min-height: 100%;
 
-      //enables proper scrolling of the modal
-      overflow: auto;
-      overscroll-behavior-y: contain;
+    //enables proper scrolling of the modal
+    overflow: auto;
+    overscroll-behavior-y: contain;
 
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8%;
 
-      padding-bottom: 20%;
-      background-color: $color-grid-item-text-background;
 
-      animation: slideRight 0.8s ease-in-out;
+    padding-bottom: 20%;
+    background-color: $color-grid-item-text-background;
 
-      @media (min-width: $breakpointL) {
-        //top: 147px;
-        top: 25%;
-        bottom: 15%;
-        left: 10%;
-        right: 10%;
-        width: auto;
-        height: auto;
-      }
-      @media (min-width: $breakpointXL) {
+    animation: slideRight 0.8s ease-in-out;
 
-      }
+    @media (min-width: $breakpointXL) {
+      inset: unset;
+      top: 25%;
+      left: 25%;
+
+      width: 50%;
+      height: 65%;
+      min-height: auto;
+
+      padding-top: 5%;
+      padding-bottom: 5%;
+    }
 
     &Close {
       all: unset;
@@ -105,7 +106,7 @@
 
     &Header,
     &Container {
-            color: $color-grid-item-text;
+      color: $color-grid-item-text;
     }
 
     &Header {
@@ -114,6 +115,9 @@
       font-size: $font-size-grid-item-modal-header-mobile;
       font-weight: normal;
 
+      @media (min-width: $breakpointXL) {
+        padding-top: 0;
+      }
     }
 
     &Container {
@@ -125,7 +129,7 @@
       & > p {
         font-size: $font-size-grid-item-modal-paragraph-mobile;
         line-height: $line-height-grid-item-modal-paragraph;
-        
+
         @media (min-width: $breakpointM) {
           font-size: $font-size-grid-item-modal-paragraph-tablet;
         }
