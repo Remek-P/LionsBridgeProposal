@@ -29,6 +29,8 @@ function GridItemText({ id, textItem, mainText = "test" }) {
       authoritative history of lorem ipsum.</p>
   </>
 
+  // TODO: move mainText text to proper component
+
   const openModal = () => {
     setIsOpen(true);
   }
