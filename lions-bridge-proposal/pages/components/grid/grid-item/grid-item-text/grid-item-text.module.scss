@@ -55,10 +55,9 @@
   &Modal {
 
     &Overlay {
-      position: fixed;
+      position: absolute;
 
       inset: 0;
-      top: 52px;
       width: 100%;
       min-height: 100%;
 
@@ -76,9 +75,6 @@
 
       animation: slideRight 0.8s ease-in-out;
 
-      @media (min-width: $breakpointM) {
-        top: 72px;
-      }
       @media (min-width: $breakpointL) {
         //top: 147px;
         top: 25%;
