@@ -45,7 +45,7 @@ function GridItemText({ id, textItem, mainText = "test" }) {
   </svg>
 
 
-  const popUp = <div className={classes.gridItemModalOverlay}>
+  const popUp = <div className={classes.gridItemModal}>
     <button type="button"
             className={classes.gridItemModalClose}
             onClick={closeModal}

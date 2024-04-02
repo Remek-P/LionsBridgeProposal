@@ -1,4 +1,7 @@
-.modalMain {
+@import "../../../styles/variables/distance.module";
+@import "../../../styles/variables/color.module";
+
+.overlay {
   display:flex;
   justify-content: center;
   align-items: center;
@@ -8,7 +11,18 @@
   width: 100%;
   height: 100%;
 
-  background-color: transparent;
+  background-color: $color-modal-overlay;
+  animation: background $transition;
 
   z-index: 101; //to cover the fixed nav
+}
+
+@keyframes background {
+  0% {
+    background-color: rgba(0,0,0,0);
+  }
+
+  100% {
+    background-color: $color-modal-overlay;
+  }
 }
