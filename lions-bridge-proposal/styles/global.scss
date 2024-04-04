@@ -19,10 +19,6 @@ body {
   overscroll-behavior: none;
 }
 
-//:focus-visible {
-//  outline: 2px solid red;
-//}
-
 //Assigning names for grid.module.scss
 @for $i from 1 through 23 {
   #gridItem#{$i} {
