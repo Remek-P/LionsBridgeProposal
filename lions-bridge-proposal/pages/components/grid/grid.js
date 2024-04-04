@@ -9,7 +9,7 @@ function Grid() {
       const path = "/assets/grid-item/";
 
   return (
-      <ul className={classes.grid}>
+      <ul className={classes.grid} role="list">
         <GridItemPicture id="gridItem1" key={1} isPriority={true} path={`${path}logo.jpg`} alt="The right partner" />
         <GridItemPicture id="gridItem2" key={2} isPriority={true} path={`${path}CEO.jpg`} alt="CEO" />
         <GridItemPicture id="gridItem3" key={3} path={`${path}office_light.jpg`} alt="" />
