@@ -40,13 +40,3 @@ body {
     display: none;
   }
 }
-
-button:focus-visible {
-  outline: 2px solid goldenrod;
-}
-a,
-li {
-  &:focus-visible {
-    outline: 2px solid goldenrod !important;
-  }
-}
