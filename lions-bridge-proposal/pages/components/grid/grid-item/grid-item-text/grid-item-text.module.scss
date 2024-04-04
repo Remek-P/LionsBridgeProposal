@@ -95,11 +95,21 @@
       right: 30px;
       width: 32px;
       height: 32px;
+      padding: 5px;
 
       cursor: pointer;
 
-      & > * {
-        fill: $color-grid-item-text;
+      & > svg > path {
+        stroke: $color-grid-item-text;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: $color-grid-item-text;
+      }
+      &:focus path,
+      &:hover path {
+        stroke: black
       }
     }
 

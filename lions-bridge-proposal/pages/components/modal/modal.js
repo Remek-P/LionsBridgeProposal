@@ -4,12 +4,13 @@ import classes from "./modal.module.scss";
 
 const Modal = ({ isOpen, onClose, children }) => {
   useEffect(() => {
+
+    // Closing the modal after clicking Escape key
     const handleEscape = (event) => {
-      if (event.key === 'Escape') {
-        onClose();
-      }
+      if (event.key === 'Escape') onClose();
     };
 
+    // Closing the modal after clicking on the overlay (here outside the modal)
     const handleClose = event => {
       if (event.target === document.getElementById("closePortal")) {
         onClose()
@@ -30,7 +31,7 @@ const Modal = ({ isOpen, onClose, children }) => {
 
   return ReactDOM.createPortal(
       <div id="closePortal" className={classes.overlay}>
-        {children}
+        { children }
       </div>,
       document.getElementById("modal")
   );

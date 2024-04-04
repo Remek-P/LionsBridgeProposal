@@ -40,8 +40,8 @@ function GridItemText({ id, textItem, mainText = "test" }) {
   };
 
   const svg = <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-    <path d="M31 1L1 31" stroke="white"/>
-    <path d="M0.999999 1L31 31" stroke="white"/>
+    <path d="M31 1L1 31" />
+    <path d="M0.999999 1L31 31" />
   </svg>
 
 
@@ -49,6 +49,7 @@ function GridItemText({ id, textItem, mainText = "test" }) {
     <button type="button"
             className={classes.gridItemModalClose}
             onClick={closeModal}
+            tabIndex={1}
     >{ svg }</button>
     <h3 className={classes.gridItemModalHeader}>{textItem}</h3>
     <div className={classes.gridItemModalContainer}>
@@ -57,7 +58,7 @@ function GridItemText({ id, textItem, mainText = "test" }) {
   </div>
 
   return (
-      <li id={id} className={classes.gridItemText} onClickCapture={openModal}>
+      <li id={id} className={classes.gridItemText} onClickCapture={openModal} tabIndex={1}>
         <span>{ textItem }</span>
         {
           isOpen
