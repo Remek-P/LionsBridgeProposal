@@ -8,8 +8,6 @@ function Grid() {
 
       const path = "/assets/grid-item/";
 
-
-
   return (
       <ul className={classes.grid}>
         <GridItemPicture id="gridItem1" key={1} isPriority={true} path={`${path}logo.jpg`} alt="The right partner" />

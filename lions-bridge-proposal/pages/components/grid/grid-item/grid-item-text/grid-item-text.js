@@ -8,6 +8,12 @@ function GridItemText({ id, textItem, mainText = "test" }) {
 
   const [isOpen, setIsOpen] = useState(false);
 
+  const a = (event) => {
+    if (event.target === "Enter") {
+      openModal()
+    }
+  }
+
   const test = <>
     <p>The purpose of lorem ipsum is to create a natural looking block of text (sentence, paragraph, page, etc.) that
       doesn't distract from the layout. A practice not without controversy, laying out pages with meaningless filler
@@ -49,7 +55,6 @@ function GridItemText({ id, textItem, mainText = "test" }) {
     <button type="button"
             className={classes.gridItemModalClose}
             onClick={closeModal}
-            tabIndex={1}
     >{ svg }</button>
     <h3 className={classes.gridItemModalHeader}>{textItem}</h3>
     <div className={classes.gridItemModalContainer}>
@@ -58,7 +63,15 @@ function GridItemText({ id, textItem, mainText = "test" }) {
   </div>
 
   return (
-      <li id={id} className={classes.gridItemText} onClickCapture={openModal} tabIndex={1}>
+      <li id={id}
+          className={classes.gridItemText}
+          onClickCapture={openModal}
+          onClick={a}
+          tabIndex="0"
+          role="button"
+          aria-expanded={isOpen ? "true" : "false"}
+          aria-label={textItem}
+      >
         <span>{ textItem }</span>
         {
           isOpen

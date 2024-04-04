@@ -104,10 +104,10 @@
       }
 
       &:hover,
-      &:focus {
+      &:focus-visible {
         background-color: $color-grid-item-text;
       }
-      &:focus path,
+      &:focus-visible path,
       &:hover path {
         stroke: black
       }

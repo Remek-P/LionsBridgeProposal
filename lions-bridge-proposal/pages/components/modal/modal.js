@@ -30,7 +30,7 @@ const Modal = ({ isOpen, onClose, children }) => {
   if (!isOpen) return null;
 
   return ReactDOM.createPortal(
-      <div id="closePortal" className={classes.overlay}>
+      <div id="closePortal" className={classes.overlay} aria-modal="true">
         { children }
       </div>,
       document.getElementById("modal")
