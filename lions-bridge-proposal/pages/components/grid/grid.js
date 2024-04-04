@@ -9,8 +9,6 @@ import GridItemText from "@/pages/components/grid/grid-item/grid-item-text/grid-
 
 function Grid() {
 
-      // const count = useRef(0)
-
       const [ count, setCount ] = useState(0);
       const path = "/assets/grid-item/";
 
