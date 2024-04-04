@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import classes from "./grid-item.module.scss";
+import classes from "./grid-item-picture.module.scss";
 
 import breakpointL from "../../../../../styles/variables/breakpoints.module.scss"
 

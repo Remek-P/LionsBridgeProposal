@@ -28,6 +28,8 @@
 
     transition: $transition;
 
+    z-index: 100;
+
     @media (min-width: $breakpointL) {
       font-size: clamp(
               $font-size-grid-item-min,

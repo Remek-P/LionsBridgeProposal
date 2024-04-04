@@ -1,18 +1,40 @@
-import { useState } from "react";
+import {useRef, useState} from "react";
 
 import Modal from "@/pages/components/modal/modal";
 
 import classes from "./grid-item-text.module.scss";
 
-function GridItemText({ id, textItem, mainText = "test" }) {
+function GridItemText({ id,
+                        textItem,
+                        mainText = "test",
+                        count,
+                        setCount }) {
 
   const [isOpen, setIsOpen] = useState(false);
 
-  const a = (event) => {
-    if (event.target === "Enter") {
-      openModal()
+  const focus = useRef(null)
+
+  const openModal = () => {
+    setIsOpen(true);
+    setCount(prevState => prevState + 1);
+    console.log("openModal", count)
+  }
+
+  const closeModal = () => {
+    setIsOpen(false);
+    setCount(0);
+    console.log("closeModal",count)
+    focus.current.focus()
+  };
+
+  const simulateEnter = (event) => {
+    if (count === 0 && (event.keyCode === 13 || event.which === 13)) {
+      console.log("simulateEnter", count)
+      openModal();
     }
   }
+
+
 
   const test = <>
     <p>The purpose of lorem ipsum is to create a natural looking block of text (sentence, paragraph, page, etc.) that
@@ -37,39 +59,36 @@ function GridItemText({ id, textItem, mainText = "test" }) {
 
   // TODO: move mainText text to proper component
 
-  const openModal = () => {
-    setIsOpen(true);
-  }
-
-  const closeModal = () => {
-      setIsOpen(false);
-  };
-
   const svg = <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
     <path d="M31 1L1 31" />
     <path d="M0.999999 1L31 31" />
   </svg>
 
 
-  const popUp = <div className={classes.gridItemModal}>
+  const popUp = <div className={classes.gridItemModal} >
+    <h3 className={classes.gridItemModalHeader} >{textItem}</h3>
+    <div className={classes.gridItemModalContainer} >
+      {test}
+    </div>
     <button type="button"
             className={classes.gridItemModalClose}
             onClick={closeModal}
-    >{ svg }</button>
-    <h3 className={classes.gridItemModalHeader}>{textItem}</h3>
-    <div className={classes.gridItemModalContainer}>
-      {test}
-    </div>
+            tabIndex="0"
+    >{svg}</button>
   </div>
+
+  console.log("rendered")
 
   return (
       <li id={id}
           className={classes.gridItemText}
           onClickCapture={openModal}
-          tabIndex="0"
+          onKeyDown={simulateEnter}
+          tabIndex={count !== 0 ? -1 : 0}
           role="button"
           aria-expanded={isOpen ? "true" : "false"}
           aria-label={textItem}
+          ref={focus}
       >
         <span>{ textItem }</span>
         {
