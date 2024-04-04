@@ -66,7 +66,6 @@ function GridItemText({ id, textItem, mainText = "test" }) {
       <li id={id}
           className={classes.gridItemText}
           onClickCapture={openModal}
-          onClick={a}
           tabIndex="0"
           role="button"
           aria-expanded={isOpen ? "true" : "false"}
