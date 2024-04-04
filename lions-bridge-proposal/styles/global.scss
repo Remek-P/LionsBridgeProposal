@@ -19,9 +19,9 @@ body {
   overscroll-behavior: none;
 }
 
-:focus-visible {
-  outline: 2px solid red;
-}
+//:focus-visible {
+//  outline: 2px solid red;
+//}
 
 //Assigning names for grid.module.scss
 @for $i from 1 through 23 {
@@ -42,5 +42,15 @@ body {
 
   @media (min-width: $breakpointXL) and (max-width: $breakpointXXL) {
     display: none;
+  }
+}
+
+button:focus-visible {
+  outline: 2px solid goldenrod;
+}
+a,
+li {
+  &:focus-visible {
+    outline: 2px solid goldenrod !important;
   }
 }
