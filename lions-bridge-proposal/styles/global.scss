@@ -1,4 +1,4 @@
-@import "./variables/breakpoints.module";
+@import "variables/breakpoints.module";
 
 .visually-hidden:not(:focus):not(:active) {
   clip-path: inset(50%);

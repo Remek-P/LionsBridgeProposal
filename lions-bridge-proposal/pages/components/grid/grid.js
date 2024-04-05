@@ -35,7 +35,7 @@ function Grid() {
         <GridItemPicture id="gridItem19" key={19} path={`${path}house_night.jpg`} alt="" />
         <GridItemText count={count} setCount={setCount} id="gridItem20" key={20} textItem="#deal done" alt="#deal Done" />
         <GridItemPicture id="gridItem21" key={21} path={`${path}partnership.jpg`} alt="" />
-            <GridItemSurvey id="gridItem22" key={22} />
+            <GridItemSurvey id="gridItem22" count={count} key={22} />
         {/*Only visible on larg screens, so the grid is balanced*/}
         <GridItemPicture id="gridItem23" key={23} hideItem="hideSmall" path={`${path}man.jpg`} alt="" />
       </ul>
