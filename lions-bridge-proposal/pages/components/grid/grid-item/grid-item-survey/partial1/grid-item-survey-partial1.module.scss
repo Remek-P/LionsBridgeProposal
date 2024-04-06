@@ -109,7 +109,7 @@
       );
     }
 
-    * > svg {
+    &Header > svg {
       width: 70%;
     }
   }
@@ -136,7 +136,7 @@
       width: 60%;
     }
 
-    * > svg {
+    &Header > svg {
       width: 70%;
     }
   }
@@ -158,9 +158,8 @@
       );
     }
 
-     svg {
-      width: 75%;
+    &Header > svg {
+      width: 70%;
     }
   }
-//  TODO: header stopped scaling
 }
