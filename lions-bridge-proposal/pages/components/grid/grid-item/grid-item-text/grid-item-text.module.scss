@@ -30,6 +30,15 @@
 
     z-index: 100;
 
+    &:hover > span {
+      scale: 110%;
+      transition: $transition;
+    }
+
+    & > span {
+      transition: $transition;
+    }
+
     @media (min-width: $breakpointL) {
       font-size: clamp(
               $font-size-grid-item-min,
