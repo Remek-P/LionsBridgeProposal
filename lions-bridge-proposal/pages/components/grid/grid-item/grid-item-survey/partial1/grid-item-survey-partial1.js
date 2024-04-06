@@ -52,6 +52,9 @@ function GridItemSurveyPartial1({
 
   const onSubmit = (event) => {
     event.preventDefault();
+    const timeStamp = new Date;
+    setSelected([...selected, {timestamp: timeStamp}]);
+    console.log(selected)
     setPartial(prevState => prevState + 1)
   }
 
@@ -78,7 +81,6 @@ function GridItemSurveyPartial1({
           {
             chooseInput()
           }
-          <input type="hidden" id="timestamp" name="timestamp" value="1286705410"/>
 
           <Button className={classes.gridFormPartial1Button}
                   tabIndex={count !== 0 ? -1 : 0}
