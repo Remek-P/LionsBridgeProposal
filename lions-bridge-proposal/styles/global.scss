@@ -1,6 +1,6 @@
 @import "variables/breakpoints.module";
 
-.visually-hidden:not(:focus):not(:active) {
+.visually-hidden {
   clip-path: inset(50%);
   height: 1px;
   overflow: hidden;

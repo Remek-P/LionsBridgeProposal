@@ -5,6 +5,7 @@ import GridItemSurveyPartial1
 
 function GridItemSurvey({ id, count }) {
 
+  const [ partial, setPartial ] = useState(0);
 
   const input1 = " Sell my home";
   const input2 = " Buy a home";
@@ -22,7 +23,12 @@ function GridItemSurvey({ id, count }) {
 
   return (
       <li id={id} className={classes.gridForm}>
-        <GridItemSurveyPartial1 count={count} selected={selected} setSelected={setSelected} />
+        {partial === 0 && <GridItemSurveyPartial1 count={count}
+                                                  selected={selected}
+                                                  setSelected={setSelected}
+                                                  partial={partial}
+                                                  setPartial={setPartial}
+        />}
       </li>
   );
 }

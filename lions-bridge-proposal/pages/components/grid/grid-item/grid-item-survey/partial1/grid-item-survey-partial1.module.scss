@@ -6,7 +6,7 @@
 .gridFormPartial1 {
 
   &Header {
-    padding-top: 15%;
+    padding-top: 10%;
     display: flex;
     justify-content: center;
 
@@ -54,8 +54,20 @@
     }
 
     & input[type="checkbox"] {
-      display: none;
+      //visibility: hidden;
     }
+  }
+
+  &Label,
+  &Button {
+    line-height: 1.5;
+    font-size: clamp(
+            $font-grid-item-label-min,
+            $font-grid-item-label-mobile,
+            $font-grid-item-label-max
+    );
+
+    cursor: pointer;
   }
 
   &Label {
@@ -63,13 +75,12 @@
     width: 100%;
     padding: 5px;
 
-    line-height: 1.5;
     font-weight: normal;
-    font-size: clamp(
-            $font-grid-item-label-min,
-            $font-grid-item-label-mobile,
-            $font-grid-item-label-max
-    );
+
+    &:hover {
+      background-color: $color-grid-item-text-background-checked;
+      color: $color-grid-item-text-checked;
+    }
 
     &::before {
       content: attr(data-inputoption);
@@ -79,16 +90,26 @@
       background-color: $color-header-background;
       color: $color-grid-item-text-checked;
     }
-
-    cursor: pointer;
   }
 
   &Button {
+    width: 20%;
+    padding: 5px 0;
+    border: 1px solid $color-grid-item-text;
+    background-color: $color-grid-item-text-background-checked;
 
+    font-weight: bold;
+    color: $color-grid-item-text-checked;
+
+    &:hover {
+      color: $color-grid-item-text;
+      background-color: $color-grid-item-text-background;
+    }
   }
 
   @media (min-width: $breakpointL) {
 
+    &Button,
     &InputContainer {
       width: 80%;
     }
@@ -101,6 +122,7 @@
       );
     }
 
+    &Button,
     &Label {
       font-size: clamp(
               $font-grid-item-legend-min,
@@ -123,7 +145,7 @@
               $font-grid-item-legend-max
       );
     }
-
+    &Button,
     &Label {
       font-size: clamp(
               $font-grid-item-legend-min,
@@ -132,6 +154,7 @@
       );
     }
 
+    &Button,
     &InputContainer {
       width: 60%;
     }
@@ -149,7 +172,7 @@
               $font-grid-item-legend-max
       );
     }
-
+    &Button,
     &Label {
       font-size: clamp(
               $font-grid-item-legend-min,
@@ -159,7 +182,7 @@
     }
 
     &Header > svg {
-      width: 70%;
+      width: 75%;
     }
   }
 }

@@ -77,8 +77,6 @@ function GridItemText({ id,
     >{svg}</button>
   </div>
 
-  console.log("rendered")
-
   return (
       <li id={id}
           className={classes.gridItemText}
