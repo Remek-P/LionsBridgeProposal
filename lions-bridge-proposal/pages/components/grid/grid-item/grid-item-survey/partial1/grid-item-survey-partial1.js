@@ -27,7 +27,7 @@ function GridItemSurveyPartial1({
   }
 
   const chooseInput = () => {
-    return selected.map(el =>
+    return selected?.map(el =>
             <div key={el.checkbox} className={classes.gridFormPartial1InputContainer}>
                 <input type="checkbox"
                        value={el.input}

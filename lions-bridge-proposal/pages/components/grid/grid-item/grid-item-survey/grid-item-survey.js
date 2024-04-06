@@ -23,12 +23,12 @@ function GridItemSurvey({ id, count }) {
 
   return (
       <li id={id} className={classes.gridForm}>
-        {/*{partial === 0 && <GridItemSurveyPartial1 count={count}*/}
-        {/*                                          selected={selected}*/}
-        {/*                                          setSelected={setSelected}*/}
-        {/*                                          partial={partial}*/}
-        {/*                                          setPartial={setPartial}*/}
-        {/*/>}*/}
+        {partial === 0 && <GridItemSurveyPartial1 count={count}
+                                                  selected={selected}
+                                                  setSelected={setSelected}
+                                                  partial={partial}
+                                                  setPartial={setPartial}
+        />}
       </li>
   );
 }
