@@ -1,0 +1,171 @@
+@import "../../../../../../../styles/variables/font.module";
+@import "../../../../../../../styles/variables/color.module";
+@import "../../../../../../../styles/variables/distance.module";
+@import "../../../../../../../styles/variables/breakpoints.module";
+
+.gridFormPartial2 {
+
+  &Selected {
+
+    width: calc(70% - $padding-partial2);
+    padding: $padding-partial2;
+    background-color: $color-grid-item-text-background-checked;
+
+    font-weight: normal;
+    color: $color-grid-item-text-checked;
+    line-height: 1.5;
+    font-size: clamp(
+            $font-grid-item-label-min,
+            $font-grid-item-label-mobile,
+            $font-grid-item-label-max
+    );
+
+    &::before {
+      content: attr(data-inputoption);
+      padding: 0.5% 2%;
+      margin-right: clamp(4px, 3%, 15px);
+
+      background-color: $color-grid-item-text-background;
+      color: $color-grid-item-text-before-checked;
+    }
+  }
+
+  &MailContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1%;
+    width: 70%;
+    gap: 30%;
+
+  }
+
+  &Label {
+    font-size: clamp(
+            $font-grid-item-legend-min,
+            $font-grid-item-legend-mobile,
+            $font-grid-item-legend-max
+    );
+    text-align: center;
+  }
+
+  &InputContainer {
+    display: flex;
+    justify-content: stretch;
+    margin-top: 5%;
+    width: calc(100% + $padding-partial2);
+  }
+
+  &Input {
+    flex-grow: 1;
+    margin: 0;
+    padding-inline: 5px;
+    border: 1px solid grey;
+
+    background-color: $color-grid-item-text-background;
+
+    font-family: inherit;
+    font-size: inherit;
+    color: $color-grid-item-text;
+
+    &:focus {
+      outline: 0 !important;
+    }
+
+    &:focus-visible,
+    &:active {
+      border-color: $color-grid-item-text-background-checked;
+    }
+  }
+
+  &Button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    aspect-ratio: 1;
+
+    cursor: pointer;
+
+    & > svg {
+      --size: 47px;
+
+      width: var(--size);
+      height: var(--size);
+
+      & > rect {
+        width: inherit;
+        height: inherit;
+        stroke: $color-grid-item-text-background-checked;
+        fill: $color-grid-item-text-background-checked;
+      }
+
+      & > path {
+        fill: $color-grid-item-text-background;
+      }
+    }
+
+    &:hover > svg > rect,
+    &:focus-visible > svg > rect {
+      fill: $color-grid-item-text-background;
+      stroke: $color-grid-item-text-background-checked;
+    }
+
+    &:hover > svg > path,
+    &:focus-visible > svg > path {
+      fill: $color-grid-item-text-background-checked;
+    }
+  }
+
+  @media (min-width: $breakpointL) {
+
+    &Label {
+      font-size: clamp(
+              $font-grid-item-legend-min,
+              $font-grid-item-legend-desktop,
+              $font-grid-item-legend-max
+      );
+    }
+
+    &Selected {
+      width: calc(80% - var(--padding));
+
+      font-size: clamp(
+              $font-grid-item-legend-min,
+              $font-grid-item-label-desktop,
+              $font-grid-item-legend-max
+      );
+    }
+  }
+
+  @media (min-width: $breakpointXL) {
+
+    &Label {
+      font-size: clamp(
+              $font-grid-item-legend-min,
+              $font-grid-item-legend-desktopXL,
+              $font-grid-item-legend-max
+      );
+    }
+
+    &Selected {
+      width: calc(60% - var(--padding));
+
+      font-size: clamp(
+              $font-grid-item-legend-min,
+              $font-grid-item-label-desktopXL,
+              $font-grid-item-legend-max
+      );
+    }
+  }
+
+  @media (min-width: $breakpointXXL) {
+
+    &Selected {
+      font-size: clamp(
+              $font-grid-item-legend-min,
+              $font-grid-item-label-desktopXXL,
+              $font-grid-item-legend-max
+      );
+    }
+  }
+}

@@ -77,12 +77,14 @@ function GridItemText({ id,
     >{svg}</button>
   </div>
 
+  const tabIndex = count ? -1 : 0;
+
   return (
       <li id={id}
           className={classes.gridItemText}
           onClickCapture={openModal}
           onKeyDown={simulateEnter}
-          tabIndex={count !== 0 ? -1 : 0}
+          tabIndex={tabIndex}
           role="button"
           aria-expanded={isOpen ? "true" : "false"}
           aria-label={textItem}

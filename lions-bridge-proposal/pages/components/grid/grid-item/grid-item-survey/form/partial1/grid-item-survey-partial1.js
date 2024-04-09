@@ -4,10 +4,10 @@ import Button from "@/pages/components/button/button";
 function GridItemSurveyPartial1({
                                   count,
                                   selected,
+                                  setPartial,
                                   setSelected
 
 }) {
-
   const handleChange = (event) => {
     setSelected(
         selected.map((el) => {
@@ -26,7 +26,7 @@ function GridItemSurveyPartial1({
       event.target.click();
     }
   }
-
+  const tabIndex = count ? -1 : 0;
   console.log(selected)
   return (
       <>
@@ -46,7 +46,7 @@ function GridItemSurveyPartial1({
                      id={el.input}
                      className={classes.gridFormPartial1Label}
                      data-inputoption={el.checkbox}
-                     tabIndex={count !== 0 ? -1 : 0}
+                     tabIndex={tabIndex}
                      onKeyDown={simulateEnter}
                      onClick={handleChange}
               >{el.input}</label>
@@ -55,9 +55,10 @@ function GridItemSurveyPartial1({
         }
 
         <Button className={classes.gridFormPartial1Button}
-                tabIndex={count !== 0 ? -1 : 0}
-                type="submit"
+                tabIndex={tabIndex}
+                type="button"
                 text="Next"
+                onClick={() => setPartial(prevState => prevState + 1)}
         />
       </>
   );

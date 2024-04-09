@@ -1,11 +1,8 @@
 import { useState } from "react";
 
-import GridItemSurveyPartial1
-  from "@/pages/components/grid/grid-item/grid-item-survey/form/partial1/grid-item-survey-partial1";
-import GridItemSurveyPartial2
-  from "@/pages/components/grid/grid-item/grid-item-survey/form/partial2/grid-item-survey-partial2";
-import classes
-  from "@/pages/components/grid/grid-item/grid-item-survey/form/partial1/grid-item-survey-partial1.module.scss";
+import GridItemSurveyPartial1 from "@/pages/components/grid/grid-item/grid-item-survey/form/partial1/grid-item-survey-partial1";
+import GridItemSurveyPartial2 from "@/pages/components/grid/grid-item/grid-item-survey/form/partial2/grid-item-survey-partial2";
+import classes from "./grid-item-survey-form.module.scss";
 
 function GridItemSurveyForm({ partial, setPartial, count }) {
 
@@ -16,8 +13,8 @@ function GridItemSurveyForm({ partial, setPartial, count }) {
 
   const inputArray = [
     {input: input1, checkbox: "A", checked: false},
-    {input: input2, checkbox: "B", checked: false},
-    {input: input3, checkbox: "C", checked: false},
+    {input: input2, checkbox: "B", checked: true},
+    {input: input3, checkbox: "C", checked: true},
     {input: input4, checkbox: "D", checked: false},
   ];
 
@@ -32,15 +29,15 @@ function GridItemSurveyForm({ partial, setPartial, count }) {
   }
 
   const displayFormStep = () => {
-    if (partial === 1) return <GridItemSurveyPartial1 count={count} selected={selected} setSelected={setSelected} />
-    if (partial === 2) return <GridItemSurveyPartial2 selected={selected} setSelected={setSelected} />
+    if (partial === 1) return <GridItemSurveyPartial1 count={count} selected={selected} setSelected={setSelected} setPartial={setPartial} />
+    if (partial === 2) return <GridItemSurveyPartial2 count={count} selected={selected} setSelected={setSelected} />
   }
 
   return (
         <form onSubmit={onSubmit}
-              className={classes.gridFormPartial1Container}
+              className={classes.gridFormContainer}
         >
-          <legend className={classes.gridFormPartial1Legend}>
+          <legend className={classes.gridFormLegend}>
             What are your real estate goals?
           </legend>
 
