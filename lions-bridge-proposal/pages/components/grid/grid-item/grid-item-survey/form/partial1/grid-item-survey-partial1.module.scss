@@ -1,22 +1,11 @@
-@import "../../../../../../styles/variables/font.module";
-@import "../../../../../../styles/variables/color.module";
-@import "../../../../../../styles/variables/distance.module";
-@import "../../../../../../styles/variables/breakpoints.module";
+@import "../../../../../../../styles/variables/font.module";
+@import "../../../../../../../styles/variables/color.module";
+@import "../../../../../../../styles/variables/distance.module";
+@import "../../../../../../../styles/variables/breakpoints.module";
 
 .gridFormPartial1 {
 
-  &Header {
-    padding-top: 10%;
-    display: flex;
-    justify-content: center;
 
-    & > svg {
-      width: 58%;
-      aspect-ratio: 5.48 / 1;
-
-      fill: $color-grid-item-text;
-    }
-  }
 
   &Container {
     display: flex;

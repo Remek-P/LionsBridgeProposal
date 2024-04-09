@@ -1,7 +1,5 @@
-@import "../../../../../styles/variables/font.module";
 @import "../../../../../styles/variables/color.module";
 @import "../../../../../styles/variables/distance.module";
-@import "../../../../../styles/variables/breakpoints.module";
 
 .gridForm {
   display: flex;
@@ -16,4 +14,3 @@
 
   z-index: 100;
 }
-

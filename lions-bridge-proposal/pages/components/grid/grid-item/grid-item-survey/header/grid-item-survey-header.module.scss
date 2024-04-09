@@ -1,0 +1,14 @@
+@import "../../../../../../styles/variables/color.module";
+
+.gridFormHeader {
+  padding-top: 10%;
+  display: flex;
+  justify-content: center;
+
+  & > svg {
+    width: 58%;
+    aspect-ratio: 5.48 / 1;
+
+    fill: $color-grid-item-text;
+  }
+}
