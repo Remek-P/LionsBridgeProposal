@@ -1,4 +1,5 @@
 import classes from "./grid-item-survey-partial1.module.scss";
+import Button from "@/pages/components/button/button";
 
 function GridItemSurveyPartial1({
                                   count,
@@ -52,6 +53,12 @@ function GridItemSurveyPartial1({
             </div>
         )
         }
+
+        <Button className={classes.gridFormPartial1Button}
+                tabIndex={count !== 0 ? -1 : 0}
+                type="submit"
+                text="Next"
+        />
       </>
   );
 }

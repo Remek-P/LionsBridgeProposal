@@ -6,7 +6,6 @@ import GridItemSurveyPartial2
   from "@/pages/components/grid/grid-item/grid-item-survey/form/partial2/grid-item-survey-partial2";
 import classes
   from "@/pages/components/grid/grid-item/grid-item-survey/form/partial1/grid-item-survey-partial1.module.scss";
-import Button from "@/pages/components/button/button";
 
 function GridItemSurveyForm({ partial, setPartial, count }) {
 
@@ -48,12 +47,6 @@ function GridItemSurveyForm({ partial, setPartial, count }) {
           {
             displayFormStep()
           }
-
-          <Button className={classes.gridFormPartial1Button}
-                  tabIndex={count !== 0 ? -1 : 0}
-                  type="submit"
-                  text="Next"
-          />
 
         </form>
   );
