@@ -13,8 +13,8 @@ function Selection({
     setSelected(
         selected.map((el) => {
           if (el?.input === event.target.id) {
-            if (!el.checked) return {...el, checked: true}
-            if (el.checked) return {...el, checked: false}
+            if (!el?.checked) return {...el, checked: true}
+            if (el?.checked) return {...el, checked: false}
           } else {
             return el
           }
