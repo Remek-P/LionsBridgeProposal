@@ -1,0 +1,71 @@
+@import "../../../../../../../../../styles/variables/font.module";
+@import "../../../../../../../../../styles/variables/color.module";
+@import "../../../../../../../../../styles/variables/distance.module";
+@import "../../../../../../../../../styles/variables/breakpoints.module";
+
+.gridFormPartial2 {
+
+  &Selected {
+
+    width: calc(70% - $padding-partial2);
+    padding: $padding-partial2;
+    background-color: $color-grid-item-text-background-checked;
+
+    font-weight: normal;
+    color: $color-grid-item-text-checked;
+    line-height: 1.5;
+    font-size: clamp(
+            $font-grid-item-label-min,
+            $font-grid-item-label-mobile,
+            $font-grid-item-label-max
+    );
+
+    &::before {
+      content: attr(data-inputoption);
+      padding: 0.5% 2%;
+      margin-right: clamp(4px, 3%, 15px);
+
+      background-color: $color-grid-item-text-background;
+      color: $color-grid-item-text-before-checked;
+    }
+  }
+
+
+  @media (min-width: $breakpointL) {
+
+    &Selected {
+      width: calc(80% - $padding-partial2);
+
+      font-size: clamp(
+              $font-grid-item-label-min,
+              $font-grid-item-label-desktop,
+              $font-grid-item-label-max
+      );
+    }
+  }
+
+  @media (min-width: $breakpointXL) {
+
+    &Selected {
+
+      width: 60%;
+
+      font-size: clamp(
+              $font-grid-item-label-min,
+              $font-grid-item-label-desktopXL,
+              $font-grid-item-label-max
+      );
+    }
+  }
+
+  @media (min-width: $breakpointXXL) {
+
+    &Selected {
+      font-size: clamp(
+              $font-grid-item-legend-min,
+              $font-grid-item-label-desktopXXL,
+              $font-grid-item-legend-max
+      );
+    }
+  }
+}
