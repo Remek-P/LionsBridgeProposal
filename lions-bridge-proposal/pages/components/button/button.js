@@ -1,6 +1,6 @@
 function Button({
                   key = 1,
-                  text,
+                  text = null,
                   type,
                   onClick = null,
                   tabIndex = 0,
