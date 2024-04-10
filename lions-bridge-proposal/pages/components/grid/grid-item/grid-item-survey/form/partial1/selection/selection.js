@@ -32,21 +32,21 @@ function Selection({
       <div className={classes.gridFormPartial1InputContainer}>
         <input type="checkbox"
                value={el?.input}
-               id={el.checkbox}
-               aria-selected={el.checked}
+               id={el?.checkbox}
+               aria-selected={el?.checked}
                name="grid-survey"
                className="visually-hidden"
                required={required}
 
         />
-        <label htmlFor={el.checkbox}
+        <label htmlFor={el?.checkbox}
                id={el?.input}
                className={classes.gridFormPartial1Label}
-               data-inputoption={el.checkbox}
+               data-inputoption={el?.checkbox}
                tabIndex={tabIndex}
                onKeyDown={simulateEnter}
                onClick={handleChange}
-        >{el.input}</label>
+        >{el?.input}</label>
       </div>
   );
 }
