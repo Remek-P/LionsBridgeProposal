@@ -31,7 +31,7 @@ function Selection({
   return (
       <div className={classes.gridFormPartial1InputContainer}>
         <input type="checkbox"
-               value={el.input}
+               value={el?.input}
                id={el.checkbox}
                aria-selected={el.checked}
                name="grid-survey"
