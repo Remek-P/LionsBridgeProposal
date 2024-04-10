@@ -21,11 +21,11 @@ function GridItemSurveyForm({ partial, setPartial, count }) {
   const [ selected, setSelected ] = useState(inputArray);
   const mailInput = useRef("");
 
-  const checkMailInput = () => {
-    const trimMail = mailInput.current.value.trim();
-    const checkEmailRegEx = /^\S+@\S+\.\S+$/.test(trimMail)
-
-  }
+  // const checkMailInput = () => {
+  //   const trimMail = mailInput.current.value.trim();
+  //   const checkEmailRegEx = /^\S+@\S+\.\S+$/.test(trimMail)
+  //
+  // }
 
   const onSubmit = (event) => {
     event.preventDefault();
@@ -35,10 +35,6 @@ function GridItemSurveyForm({ partial, setPartial, count }) {
     setPartial(prevState => prevState + 1);
   }
 
-  const displayFormStep = () => {
-    if (partial === 1) return <GridItemSurveyPartial1 count={count} selected={selected} setSelected={setSelected} setPartial={setPartial} />
-    if (partial === 2) return <GridItemSurveyPartial2 count={count} selected={selected} mailInput={mailInput} />
-  }
   console.log("Form")
   return (
         <form onSubmit={onSubmit}
@@ -48,9 +44,9 @@ function GridItemSurveyForm({ partial, setPartial, count }) {
             What are your real estate goals?
           </legend>
 
-          {
-            displayFormStep()
-          }
+          { partial === 1 && <GridItemSurveyPartial1 count={count} selected={selected} setSelected={setSelected} setPartial={setPartial} /> }
+          { partial === 2 && <GridItemSurveyPartial2 count={count} selected={selected} mailInput={mailInput} /> }
+
 
         </form>
   );
