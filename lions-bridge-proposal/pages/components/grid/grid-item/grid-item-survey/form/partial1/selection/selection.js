@@ -12,7 +12,7 @@ function Selection({
   const handleChange = (event) => {
     setSelected(
         selected.map((el) => {
-          if (el.input === event.target.id) {
+          if (el?.input === event.target.id) {
             if (!el.checked) return {...el, checked: true}
             if (el.checked) return {...el, checked: false}
           } else {
@@ -40,7 +40,7 @@ function Selection({
 
         />
         <label htmlFor={el.checkbox}
-               id={el.input}
+               id={el?.input}
                className={classes.gridFormPartial1Label}
                data-inputoption={el.checkbox}
                tabIndex={tabIndex}
