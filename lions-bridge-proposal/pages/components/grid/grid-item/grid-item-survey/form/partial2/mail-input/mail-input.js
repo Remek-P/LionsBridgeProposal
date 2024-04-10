@@ -21,7 +21,7 @@ function MailInput({ count, mailInput }) {
 
         <div className={classes.gridFormPartial2InputContainer}>
 
-          <input type="text"
+          <input type="email"
                  id="email"
                  ref={mailInput}
                  tabIndex={tabIndex}
