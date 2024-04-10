@@ -27,7 +27,7 @@ function GridItemSurveyPartial1({
     }
   }
   const tabIndex = count ? -1 : 0;
-  console.log(selected)
+  console.log("GridItemSurveyPartial1")
   return (
       <>
         {

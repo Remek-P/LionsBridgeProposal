@@ -13,4 +13,17 @@
   transition: $transition;
 
   z-index: 100;
+
+  &Header {
+    padding-top: 7%;
+    display: flex;
+    justify-content: center;
+
+    & > svg {
+      width: 58%;
+      aspect-ratio: 5.48 / 1;
+
+      fill: $color-grid-item-text;
+    }
+  }
 }

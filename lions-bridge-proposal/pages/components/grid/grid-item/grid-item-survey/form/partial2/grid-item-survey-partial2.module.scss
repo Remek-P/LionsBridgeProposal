@@ -37,7 +37,6 @@
     padding-top: 1%;
     width: 70%;
     gap: 30%;
-
   }
 
   &Label {
@@ -51,9 +50,8 @@
 
   &InputContainer {
     display: flex;
-    justify-content: stretch;
+    justify-content: space-evenly;
     margin-top: 5%;
-    width: calc(100% + $padding-partial2);
   }
 
   &Input {
@@ -116,6 +114,12 @@
     }
   }
 
+  @media (min-width: 370px) {
+    &InputContainer {
+      width: calc(100% + $padding-partial2);
+    }
+  }
+
   @media (min-width: $breakpointL) {
 
     &Label {
@@ -127,13 +131,17 @@
     }
 
     &Selected {
-      width: calc(80% - var(--padding));
+      width: calc(80% - $padding-partial2);
 
       font-size: clamp(
-              $font-grid-item-legend-min,
+              $font-grid-item-label-min,
               $font-grid-item-label-desktop,
-              $font-grid-item-legend-max
+              $font-grid-item-label-max
       );
+    }
+
+    &MailContainer {
+      width: 80%;
     }
   }
 
@@ -148,17 +156,30 @@
     }
 
     &Selected {
-      width: calc(60% - var(--padding));
+
+      width: 60%;
 
       font-size: clamp(
-              $font-grid-item-legend-min,
+              $font-grid-item-label-min,
               $font-grid-item-label-desktopXL,
-              $font-grid-item-legend-max
+              $font-grid-item-label-max
       );
+    }
+
+    &InputContainer {
+      width: calc(80% - $padding-partial2);
     }
   }
 
   @media (min-width: $breakpointXXL) {
+
+    &Label {
+      font-size: clamp(
+              $font-grid-item-legend-min,
+              $font-grid-item-legend-desktopXXL,
+              $font-grid-item-legend-max
+      );
+    }
 
     &Selected {
       font-size: clamp(
@@ -166,6 +187,10 @@
               $font-grid-item-label-desktopXXL,
               $font-grid-item-legend-max
       );
+    }
+
+    &InputContainer {
+      width: calc(76% + $padding-partial2);
     }
   }
 }

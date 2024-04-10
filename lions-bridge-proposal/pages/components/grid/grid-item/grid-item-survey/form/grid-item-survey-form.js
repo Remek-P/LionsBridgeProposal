@@ -1,4 +1,4 @@
-import { useState } from "react";
+import {useRef, useState} from "react";
 
 import GridItemSurveyPartial1 from "@/pages/components/grid/grid-item/grid-item-survey/form/partial1/grid-item-survey-partial1";
 import GridItemSurveyPartial2 from "@/pages/components/grid/grid-item/grid-item-survey/form/partial2/grid-item-survey-partial2";
@@ -19,20 +19,27 @@ function GridItemSurveyForm({ partial, setPartial, count }) {
   ];
 
   const [ selected, setSelected ] = useState(inputArray);
+  const mailInput = useRef("");
+
+  const checkMailInput = () => {
+    const trimMail = mailInput.current.value.trim();
+    const checkEmailRegEx = /^\S+@\S+\.\S+$/.test(trimMail)
+
+  }
 
   const onSubmit = (event) => {
     event.preventDefault();
     const timeStamp = new Date;
-    setSelected([...selected, {timestamp: timeStamp}]);
-    console.log(selected)
-    setPartial(prevState => prevState + 1)
+    setSelected([...selected, {timestamp: timeStamp}, {email: mailInput.current.value} ]);
+    console.log("survey", selected);
+    setPartial(prevState => prevState + 1);
   }
 
   const displayFormStep = () => {
     if (partial === 1) return <GridItemSurveyPartial1 count={count} selected={selected} setSelected={setSelected} setPartial={setPartial} />
-    if (partial === 2) return <GridItemSurveyPartial2 count={count} selected={selected} setSelected={setSelected} />
+    if (partial === 2) return <GridItemSurveyPartial2 count={count} selected={selected} mailInput={mailInput} />
   }
-
+  console.log("Form")
   return (
         <form onSubmit={onSubmit}
               className={classes.gridFormContainer}
