@@ -15,9 +15,11 @@ function GridItemText({ id,
   const focus = useRef(null)
 
   const openModal = () => {
-    setIsOpen(true);
-    setCount(prevState => prevState + 1);
-    console.log("openModal", count)
+    if (!isOpen) {
+      setIsOpen(true);
+      setCount(prevState => prevState + 1);
+      console.log("openModal", count)
+    }
   }
 
   const closeModal = () => {
@@ -33,8 +35,6 @@ function GridItemText({ id,
       openModal();
     }
   }
-
-
 
   const test = <>
     <p>The purpose of lorem ipsum is to create a natural looking block of text (sentence, paragraph, page, etc.) that
@@ -65,24 +65,28 @@ function GridItemText({ id,
   </svg>
 
 
-  const popUp = <div className={classes.gridItemModal} >
-    <h3 className={classes.gridItemModalHeader} >{textItem}</h3>
-    <div className={classes.gridItemModalContainer} >
-      {test}
-    </div>
-    <button type="button"
-            className={classes.gridItemModalClose}
-            onClick={closeModal}
-            tabIndex="0"
-    >{svg}</button>
-  </div>
+  const popUp = (
+      <div className={classes.gridItemModal}>
+        <h3 className={classes.gridItemModalHeader}>{textItem}</h3>
+        <div className={classes.gridItemModalContainer}>
+          {test}
+        </div>
+        <button type="button"
+                className={classes.gridItemModalClose}
+                onClick={closeModal}
+                tabIndex="0"
+        >
+          {svg}
+        </button>
+      </div>
+  )
 
   const tabIndex = count ? -1 : 0;
 
   return (
       <li id={id}
           className={classes.gridItemText}
-          onClickCapture={openModal}
+          onClick={openModal}
           onKeyDown={simulateEnter}
           tabIndex={tabIndex}
           role="button"
@@ -90,7 +94,7 @@ function GridItemText({ id,
           aria-label={textItem}
           ref={focus}
       >
-        <span>{ textItem }</span>
+        <span>{textItem}</span>
         {
           isOpen
               ? <Modal isOpen={isOpen} onClose={closeModal}>{popUp}</Modal>
