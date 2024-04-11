@@ -13,7 +13,8 @@
   }
 
   &Legend {
-    padding-top: 7%;
+    padding-top: 5%;
+
     font-size: clamp(
             $font-grid-item-legend-min,
             $font-grid-item-legend-mobile,
@@ -27,17 +28,6 @@
       font-size: clamp(
               $font-grid-item-legend-min,
               $font-grid-item-legend-desktop,
-              $font-grid-item-legend-max
-      );
-    }
-  }
-
-  @media (min-width: $breakpointXL) {
-
-    &Legend {
-      font-size: clamp(
-              $font-grid-item-legend-min,
-              $font-grid-item-legend-desktopXL,
               $font-grid-item-legend-max
       );
     }

@@ -17,7 +17,7 @@ function MailInput({ count, mailInput }) {
 
   return (
       <div className={classes.gridFormPartial2MailContainer}>
-        <label htmlFor="mail" className={classes.gridFormPartial2Label}>Share your email address.</label>
+        <label htmlFor="email" className={classes.gridFormPartial2Label}>Share your email address.</label>
 
         <div className={classes.gridFormPartial2InputContainer}>
 
@@ -27,7 +27,7 @@ function MailInput({ count, mailInput }) {
                  tabIndex={tabIndex}
                  placeholder="Your email address"
                  className={classes.gridFormPartial2Input}
-                 required
+                 // required
           />
           <Button className={classes.gridFormPartial2Button} type="submit" text={svg} tabIndex={tabIndex}/>
 

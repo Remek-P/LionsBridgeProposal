@@ -113,14 +113,6 @@
 
   @media (min-width: $breakpointXL) {
 
-    &Label {
-      font-size: clamp(
-              $font-grid-item-legend-min,
-              $font-grid-item-legend-desktopXL,
-              $font-grid-item-legend-max
-      );
-    }
-
     &InputContainer {
       width: calc(80% - $padding-partial2);
     }

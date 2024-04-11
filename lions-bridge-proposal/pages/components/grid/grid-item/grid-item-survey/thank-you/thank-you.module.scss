@@ -1,7 +1,52 @@
+@import "./../../../../../../styles/variables/font.module";
+@import "./../../../../../../styles/variables/color.module";
+@import "./../../../../../../styles/variables/breakpoints.module";
+
 .gridItemSurveyThankYou {
 
-  &Text {
+  &Container {
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 0;
+    height: fit-content;
+    gap: 25%;
+
+    & > svg {
+      //width: 100%;
+      height: 30%;
+
+      & > path {
+        fill: $color-grid-item-text-background-checked;
+      }
+    }
+  }
+  &Text {
+    --increasedFont: 0.35rem;
+
+    font-size: clamp(
+            $font-grid-item-legend-min,
+            $font-grid-item-legend-mobile + var(--increasedFont),
+            $font-grid-item-legend-max
+    );
+    text-align: center;
+
+    @media (min-width: $breakpointL) {
+      font-size: clamp(
+              $font-grid-item-legend-min,
+              $font-grid-item-legend-desktop + var(--increasedFont),
+              $font-grid-item-legend-max
+      );
+    }
+
+    @media (min-width: $breakpointXXL) {
+      font-size: clamp(
+              $font-grid-item-legend-min,
+              $font-grid-item-legend-desktopXXL + var(--increasedFont),
+              $font-grid-item-legend-max
+      );
+    }
   }
 
 }
