@@ -13,8 +13,8 @@ function GridItemSurveyForm({ partial, setPartial, count }) {
 
   const inputArray = [
     {input: input1, checkbox: "A", checked: false},
-    {input: input2, checkbox: "B", checked: true},
-    {input: input3, checkbox: "C", checked: true},
+    {input: input2, checkbox: "B", checked: false},
+    {input: input3, checkbox: "C", checked: false},
     {input: input4, checkbox: "D", checked: false},
   ];
 
