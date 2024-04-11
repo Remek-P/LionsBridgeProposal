@@ -12,6 +12,10 @@
     height: 26px;
 
     fill: $color-header-font;
+
+    @media (prefers-color-scheme: dark) {
+      fill: $color-header-font-dark;
+    }
   }
 
   @media (min-width: $breakpointM) {

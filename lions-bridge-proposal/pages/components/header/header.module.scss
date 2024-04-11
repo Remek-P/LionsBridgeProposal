@@ -20,4 +20,8 @@
     //padding: 44px 5px 39px 5px;
 
   }
+  
+  @media (prefers-color-scheme: dark) {
+    background-color: $color-header-background-dark;
+  }
 }

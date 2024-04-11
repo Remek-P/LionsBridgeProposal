@@ -8,7 +8,7 @@ function Header() {
   return (
       <div className={classes.header} >
         <Logo />
-        <HeaderNav />
+        {/*<HeaderNav />*/}
       </div>
   );
 }
