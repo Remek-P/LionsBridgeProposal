@@ -37,6 +37,7 @@
 
     & > span {
       transition: $transition;
+      animation: breath 2s ease-in-out;
     }
 
     @media (min-width: $breakpointL) {
@@ -171,5 +172,15 @@
   }
   100% {
     transform:translateX(0);
+  }
+}
+
+@keyframes breath {
+  0%, 100% {
+    scale: 100%;
+  }
+
+  50% {
+    scale: 105%;
   }
 }
