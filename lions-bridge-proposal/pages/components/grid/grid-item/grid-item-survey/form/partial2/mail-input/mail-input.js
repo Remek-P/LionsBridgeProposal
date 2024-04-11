@@ -27,8 +27,9 @@ function MailInput({ count, mailInput }) {
                  tabIndex={tabIndex}
                  placeholder="Your email address"
                  className={classes.gridFormPartial2Input}
-                 // required
+                 required
           />
+
           <Button className={classes.gridFormPartial2Button} type="submit" text={svg} tabIndex={tabIndex}/>
 
         </div>
