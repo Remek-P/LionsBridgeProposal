@@ -7,11 +7,12 @@ function Button({
                   className,
                   isDisabled = false,
 }) {
+
   return (
       <button className={className}
               key={key}
-              onClick={onClick}
               type={type}
+              onClick={onClick}
               tabIndex={tabIndex}
               disabled={isDisabled}
       >

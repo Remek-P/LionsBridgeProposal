@@ -10,8 +10,17 @@ function GridItemSurveyPartial1({
 
 }) {
 
+  const next = !selected?.find(el => el.checked === true)
+
+  const onClick = () => {
+    if (next) return null;
+    setPartial(prevState => prevState + 1)
+  }
+
   const tabIndex = count ? -1 : 0;
   console.log("GridItemSurveyPartial1")
+  const buttonText = next ? "Select" : "Next"
+
   return (
       <>
         {
@@ -28,8 +37,8 @@ function GridItemSurveyPartial1({
         <Button className={classes.gridFormPartial1Button}
                 tabIndex={tabIndex}
                 type="button"
-                text="Next"
-                onClick={() => setPartial(prevState => prevState + 1)}
+                text={buttonText}
+                onClick={onClick}
         />
       </>
   );
