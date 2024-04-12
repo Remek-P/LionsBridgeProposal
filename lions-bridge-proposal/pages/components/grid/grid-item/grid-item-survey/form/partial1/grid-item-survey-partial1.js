@@ -19,7 +19,7 @@ function GridItemSurveyPartial1({
 
   const tabIndex = count ? -1 : 0;
   console.log("GridItemSurveyPartial1")
-  const buttonText = next ? "Select" : "Next"
+  const buttonText = next ? "Select" : "Next";
 
   return (
       <>
