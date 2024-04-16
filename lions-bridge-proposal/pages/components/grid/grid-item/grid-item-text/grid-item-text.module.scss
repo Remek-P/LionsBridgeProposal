@@ -161,6 +161,14 @@
         @media (min-width: $breakpointXXL) {
           font-size: $font-size-grid-item-modal-paragraph-desktopXL;
         }
+
+        &:last-of-type {
+          padding-bottom: 25%;
+
+          @media (min-width: $breakpointL) {
+            padding-bottom: 50%;
+          }
+        }
       }
     }
   }
